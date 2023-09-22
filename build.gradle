@@ -7,4 +7,16 @@ sonar {
     property "sonar.projectKey", "ShowTestCases"
     property "sonar.projectName", "ShowTestCases"
   }
+
+  jacoco {
+    toolVersion = "0.8.8"
+  }
+  jacocoTestReport {
+    reports {
+      html.enabled true
+      xml.enabled true
+      xml.destination
+      file("${buildDir}/reports/jacoco.xml")
+    }
+  } 
 }
